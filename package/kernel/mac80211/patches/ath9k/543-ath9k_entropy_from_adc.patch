@@ -33,7 +33,7 @@
 +	memset(buf, 0, len);
 +	for (i = 0; i < len; i++) {
 +		for (j = 0; j < 4; j++) {
-+			u32 regval = REG_READ(ah, AR_PHY_TST_ADC);
++			u32 regval = REG_READ(ah, AR_PHY_TST_ADC(ah));
 +
 +			buf[i] <<= 2;
 +			buf[i] |= (regval & 1) | ((regval & BIT(10)) >> 9);
@@ -181,6 +181,5 @@
  
 +#define AR_PHY_TST_ADC      0x9C24
 +
- #define AR_PHY_CHAN_INFO_GAIN_DIFF             0x9CF4
- #define AR_PHY_CHAN_INFO_GAIN_DIFF_UPPER_LIMIT 320
+ #define AR_PHY_CHAN_INFO_GAIN_DIFF             320
  
