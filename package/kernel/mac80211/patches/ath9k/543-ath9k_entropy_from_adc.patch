@@ -181,5 +181,6 @@
  
 +#define AR_PHY_TST_ADC      0x9C24
 +
- #define AR_PHY_CHAN_INFO_GAIN_DIFF             320
+ #define AR_PHY_CHAN_INFO_GAIN_DIFF             0x9CF4
+ #define AR_PHY_CHAN_INFO_GAIN_DIFF_UPPER_LIMIT 320
  
